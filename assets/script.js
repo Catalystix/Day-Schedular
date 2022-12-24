@@ -4,12 +4,15 @@
 var today = dayjs();
 $('#currentDay').text(today.format('MMM D, YYYY'));
 
-$(function(){
-    $('.saveBtn').on('click', function(){
+$(function () {
+    $('.saveBtn').on('click', function () {
         console.log('checking')
-     var text = $(this).siblings('.description').val()
+        var text = $(this).siblings('.description').val()
         console.log(text);
-    })
+        // siblings doesnt work here. must use parent. to access the text
+        localStorage.setItem($(this).parent().attr('id'), $(this).prev().val()); // saves the item in the description value to local storage. 
+          // this retrieves 
+    });
    var currentHour = dayjs().hour();
     
            $( ".row" ).each(function( i ) {
@@ -25,11 +28,21 @@ $(function(){
             } else {
                 timeBlock.addClass('present');
             }     
+            
            });
-
-        
+           
+        // //    function save() {
+        // //     localStorage.setItem($(this).parent().attr('id'), $(this).prev().val())
+        //   };
       
 });
+
+$(function () {
+    $('.saveBtn').on('click', function () {
+        console.log('checking')
+        localStorage.getItem($(this).parent().attr('id'), $(this).prev().val())
+    });
+})
 
 // $(function () {
     // TODO: Add a listener for click events on the save button. This code should
