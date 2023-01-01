@@ -41,6 +41,9 @@ $(function () {
     $('.saveBtn').on('click', function () {
         console.log('checking')
         localStorage.getItem($(this).parent().attr('id'), $(this).prev().val())
+        Object.entries(localStorage).forEach(([ key, value ]) => { // found this on stackoverflow** not sure if its working. 
+            console.log(`${key} => ${value}`);
+        })
     });
 })
 
@@ -62,5 +65,5 @@ $(function () {
     // the values of the corresponding textarea elements. HINT: How can the id
     // attribute of each time-block be used to do this?
     //
-    // TODO: Add code to display the current date in the header of the page.
+    // TODO: Add code to display the current date in the header of the page. Done **
   //});
