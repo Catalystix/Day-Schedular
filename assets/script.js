@@ -14,8 +14,10 @@ $(function () {
           // this retrieves 
     });
    var currentHour = dayjs().hour();
-    
+        
            $( ".row" ).each(function( i ) {
+            var text = localStorage.getItem($(this).attr('id'))
+            $(this).children('.description').val(text)
             var timeBlock = $(this)
             var timeId = timeBlock.attr('id')
             var time = timeId.split('-') [1];
@@ -30,22 +32,12 @@ $(function () {
             }     
             
            });
-           
         // //    function save() {
         // //     localStorage.setItem($(this).parent().attr('id'), $(this).prev().val())
-        //   };
-      
+        //   };  
 });
 
-$(function () {
-    $('.saveBtn').on('click', function () {
-        console.log('checking')
-        localStorage.getItem($(this).parent().attr('id'), $(this).prev().val())
-        Object.entries(localStorage).forEach(([ key, value ]) => { // found this on stackoverflow** not sure if its working. 
-            console.log(`${key} => ${value}`);
-        })
-    });
-})
+
 
 // $(function () {
     // TODO: Add a listener for click events on the save button. This code should

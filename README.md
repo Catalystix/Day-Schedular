@@ -24,3 +24,8 @@
  * W3 Schools for some .js methods and functions
  * W3 Schools for README.MD Directions
  * My tutor!
+
+
+https://github.com/Catalystix/Day-Schedular
+
+https://catalystix.github.io/Day-Schedular/
