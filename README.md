@@ -24,7 +24,7 @@
  * W3 Schools for some .js methods and functions
  * W3 Schools for README.MD Directions
  * My tutor!
-
+![Alt text](assets/workdayscheduler.jpg)
 
 https://github.com/Catalystix/Day-Schedular
 
